@@ -6,7 +6,7 @@ Includes:
 
 - ✅ TypeScript
 - ✅ ESLint
-- ❌ Prettier
+- ✅ Prettier
 - ❌ Unit Tests
 
 ## Setup Details
@@ -31,3 +31,11 @@ Includes:
   - `npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`
   - Copy in `eslint.config.mjs`
   - Add script to package.json: `"lint": "eslint"`
+
+### Prettier
+
+In general, I rely on the VSCode plugin to run prettier as doing so through ESLint is not as fast.
+At some point, I should set up a husky pre-commit hook for this.
+
+- The `.prettierrc` file might not be required, since I have my vscode already configured with single quotes. Probably good to include for other contributers though.
+- The `.prettierignore` is pretty important since Prettier now formats markdown which drives me crazy.
