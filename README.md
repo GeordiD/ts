@@ -5,10 +5,29 @@ This is a starter project to either serve as a template for new projects or a pl
 Includes:
 
 - ✅ TypeScript
-- ❌ ESLint
+- ✅ ESLint
 - ❌ Prettier
 - ❌ Unit Tests
 
-## Notes
+## Setup Details
 
-- You probably don't need the `rimraf`/`pnpm run clean` step if you're making a frontend project or using some sort of bundler (vite, etc). For backend/CLI projects, you do need to clean up between builds or there will be leftover artifacts of old files in your dist and who wants that?
+### TypeScript
+
+- Installation:
+  - `pnpm install -D typescript`
+  - Copy in `tsconfig.json`
+  - Add package.json script: `"build": "tsc"`
+- If making a backend/CLI/non-vite app, you'll need rimraf to clean up:
+  - `pnpm install rimraf'
+  - Update package.json:
+    ```
+    "build": "pnpm run clean && tsc",
+    "clean": "rimraf ./dist",
+    ```
+
+### ESLint
+
+- Installation:
+  - `npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`
+  - Copy in `eslint.config.mjs`
+  - Add script to package.json: `"lint": "eslint"`
