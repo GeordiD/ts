@@ -1,6 +1,7 @@
 node_modules
 dist
 .env
+.dev_notes.md
 
 # Husky
 .husky/**
